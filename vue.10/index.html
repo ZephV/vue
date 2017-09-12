@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>18.10</title>
+	<meta http-equiv="Context-Type" content="text/html" charset="utf-8">
+
+	<style>
+		.liked{
+			background: #a14;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<like></like>
+</div>
+<template id="like-component-tpl">
+	<button :class="{liked : liked}" @click="toggle_like()">赞 + {{like_count}}</button>
+</template>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

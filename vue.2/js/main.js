@@ -1,0 +1,21 @@
+var app = new Vue({
+	el:'#app',
+	data:{
+		foodlist:[
+			{
+				name:'可乐',
+				price:'5',
+				discount:.8,
+			},
+			{
+				name:'雪碧',
+				price:'4',
+				discount:.6,
+			},
+			{
+				name:'屈臣氏',
+				price:'3',
+			}
+		],
+	}
+});

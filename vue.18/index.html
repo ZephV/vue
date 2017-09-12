@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>18.18</title>
+	<meta http-equiv="Context-Type" content="text/html" charset="utf-8">
+	<style>
+		.panel{
+			max-width: 300px;
+			border: 1px solid #999;
+			margin-bottom: 15px;
+		}
+
+		.panel>*{
+			padding: 15px;
+		}
+
+		.panel .title{
+			border-bottom: 1px solid #999;
+		}
+
+		.panel .footer{
+			border-top: 1px solid #999;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="app">
+	<panel>
+		<div slot="title">你好吗</div>
+		<div slot="content">
+			nihao
+		</div>
+		<div flot="footer">1998</div>
+	</panel>
+	<panel>asda</panel>
+</div>
+
+<template id="panel-tpl">
+	<div class="panel">
+		<div class="title">
+			<slot name="title">标题</slot>
+		</div>
+		<div class="content">
+			<slot name="content">内容</slot>
+		</div>
+		<div class="footer">
+			<slot name="footer">时间</slot>
+		</div>
+	</div>
+</template>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

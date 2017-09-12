@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>18.16</title>
+	<meta http-equiv="Context-Type" content="text/html" charset="utf-8">
+	<style>
+		.card{
+			width: 200px;
+			background: #ccc;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<div v-pin:true.bottom.left="card1.pinned" class="card">
+		<button @click="card1.pinned = !card1.pinned">钉住/取消</button>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, voluptate numquam atque, dolore molestias minima sit? Cumque maxime sit porro, pariatur cupiditate ex quaerat, ea, harum iure numquam iusto exercitationem.
+	</div>
+	<div v-pin="card2.pinned" class="card">
+		<a @click = "card2.pinned = !card2.pinned" href="#">钉住</a>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, voluptate numquam atque, dolore molestias minima sit? Cumque maxime sit porro, pariatur cupiditate ex quaerat, ea, harum iure numquam iusto exercitationem.
+	</div>
+	<div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et officiis eius quod incidunt, esse, non ad velit at fugiat similique, laboriosam magnam vero unde tempore. Iure quidem reprehenderit, possimus veniam.</div>
+	<div>Eveniet laudantium magnam veniam molestias corporis maxime optio quasi voluptatum in maiores officia, libero, magni placeat. Nesciunt eaque, voluptates, dolore aut iste perferendis quisquam, quam quos, ipsa consectetur iure esse!</div>
+	<div>Ex, necessitatibus, ad. Qui, numquam quos. Fuga neque corrupti enim iure, a sint! Dolorem eaque eligendi rerum adipisci distinctio est laborum cumque! Voluptates repudiandae modi, numquam aut voluptate laboriosam dignissimos.</div>
+	<div>Necessitatibus quas adipisci itaque eos, debitis voluptatum excepturi reiciendis error dolore, doloribus asperiores reprehenderit alias in totam sapiente suscipit, id quo voluptatibus labore vitae dolor molestiae? Atque sint maxime numquam.</div>
+	<div>Tempora repudiandae ea vitae, sapiente harum soluta molestias. Fugiat doloremque excepturi cumque eaque distinctio, aliquam rem iste illum reiciendis praesentium vitae! Sed iusto, soluta eum deleniti rem fugit dolor, sapiente!</div>
+	<div>Quisquam maxime ratione, porro eum? Possimus ex, tempore molestias beatae, maiores earum ad unde, sint error maxime minus neque delectus blanditiis velit quos sed iure minima corporis inventore quod perspiciatis?</div>
+	<div>Perspiciatis cupiditate libero modi ad, iste enim esse officiis molestiae assumenda voluptatibus sed neque a voluptatem reiciendis maiores minus ducimus quis doloremque sint suscipit expedita consectetur eligendi. Unde reiciendis, voluptates!</div>
+	<div>Quidem quis facere harum, delectus aut id voluptatem beatae, ad consequatur illum nesciunt tenetur nisi, molestias blanditiis aspernatur nihil modi. Minima perferendis deserunt earum illo ducimus blanditiis hic iure magnam.</div>
+	</div>
+</div>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>18.7</title>
+</head>
+<body>
+<div id="app">
+	<div v-if="role == 'admin' || role == 'super_admin'">
+		管理员你好
+	</div>
+	<div v-else-if="role == 'hr'">
+		待查看简历列表:
+		....
+	</div>
+	<div v-else>
+		您没有权限访问此页面
+	</div>
+</div>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
