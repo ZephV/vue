@@ -8,6 +8,17 @@
     <title>2.0</title>
 </head>
 <body>
+<div id="app">
+    <div>
+        <router-link to="/">首页</router-link>
+        <router-link to="/about">关于我们</router-link>
+        <router-link to="/user/asdfa">理算单</router-link>
+        <router-link to="/user/lisuanda">网吧</router-link>
+    </div>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
 <script src="../lib/vue.js"></script>
 <script src="../lib/vue-router.js"></script>
 <script src="js/main.js"></script>
