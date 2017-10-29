@@ -13,8 +13,9 @@ let routes = [
         component:{
             template:
                 `<div>
-                <h1>关于我们</h1>
-            </div>`,
+                 <h1>关于我们</h1>
+                 </div>
+                `,
         },
     },
     {
@@ -22,9 +23,27 @@ let routes = [
         component:{
             template:
                 `<div>
-                <h1>{{$route.params.name}}</h1>
+                <h1>我叫:{{$route.params.name}}</h1>
+                <router-link to="more" append>更多信息</router-link>
+                <router-view></router-view>
             </div>`,
         },
+        children:[
+            {
+                path:'more',
+                component:{
+                    template:
+                        `
+                    <div>
+                    用户:{{$route.params.name}}的详细细心
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque dolor dolore ex expedita, laboriosam maxime nulla temporibus! Accusamus asperiores aspernatur, beatae consectetur odit optio quis quod repellendus tempore ut!
+                    </div>
+                    
+                    `,
+
+                }
+            }
+        ]
     },
 ];
 
