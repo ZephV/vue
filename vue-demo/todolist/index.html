@@ -17,6 +17,7 @@
             <todo-item :content="item" :index="index" v-for="(item,index) in list" @delete="handleItemDelete"></todo-item>
         </ul>
     </div>
+
     <script>
         var TodoItem = {
             props: ['content', 'index'],
@@ -24,7 +25,6 @@
             methods: {
                 handleItemClick: function() {
                     this.$emit("delete", this.index);
-                    alert(this.index);
                 }
             }
         }
