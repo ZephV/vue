@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在Vue中使用animate.css库</title>
+    <script src="../../../lib/vue.js"></script>
+    <link rel="stylesheet" href="../animate.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <transition name="fade" enter-active-class="animated swing " leave-active-class="animated flash">
+            <div v-if="show">Hello World!!!</div>
+        </transition>
+        <button @click="handleClick">切换</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                show: true
+            },
+            methods: {
+                handleClick: function() {
+                    this.show = !this.show;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

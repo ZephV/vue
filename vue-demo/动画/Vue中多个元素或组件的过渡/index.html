@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue中多个元素或组件的过渡</title>
+    <script src="../../../lib/vue.js"></script>
+    <style>
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+        
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <transition name="fade" mode="out-in">
+            <!-- 元素 -->
+            <!-- <div v-if="show" key="Hello">Hello World!!!</div>
+            <div v-else key="Bye">Bye World!!!</div> -->
+
+            <!-- 组件 -->
+            <!-- <child v-if="show"></child>
+            <child-one v-else></child-one> -->
+            <component :is="type"></component>
+        </transition>
+        <button @click="handleClick">点击</button>
+    </div>
+
+    <script>
+        Vue.component('child', {
+            template: `<div>This is Child component</div>`
+        });
+        Vue.component('child-one', {
+            template: `<div>This is Child-One component</div>`
+        });
+
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                show: true,
+                type: 'child'
+            },
+            methods: {
+                handleClick: function() {
+                    // this.show = !this.show;
+                    this.type = this.type === "child" ? "child-one" : "child";
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
